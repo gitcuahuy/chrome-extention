@@ -9,6 +9,10 @@ import en from '@angular/common/locales/en';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {NzButtonModule} from "ng-zorro-antd/button";
+import {NzAffixModule} from "ng-zorro-antd/affix";
+import {NzInputNumberModule} from "ng-zorro-antd/input-number";
+import {NzDrawerModule} from "ng-zorro-antd/drawer";
 
 registerLocaleData(en);
 
@@ -20,7 +24,11 @@ registerLocaleData(en);
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NzButtonModule,
+    NzAffixModule,
+    NzInputNumberModule,
+    NzDrawerModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
