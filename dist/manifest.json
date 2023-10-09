@@ -1,0 +1,50 @@
+{
+  "name": "Git assistant",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "This extension description",
+  "browser_action": {
+    "default_icon": "favicon.ico",
+    "default_popup": "git-extention/index.html",
+    "default_title": "Git cua huy extension Extension"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://git.evotek.vn/*"
+      ],
+      "js": [
+        "scripts/jquery.js",
+        "scripts/git-hyperlink-script.js"
+      ],
+      "css": [
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "scripts/jquery.js",
+        "git-extention/main.js",
+        "git-extention/polyfills.js",
+        "git-extention/runtime.js",
+        "git-extention/vendor.js"
+      ],
+      "css": [
+        "git-extention/styles.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  },
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+    "storage"
+  ]
+}

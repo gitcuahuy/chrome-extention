@@ -3,7 +3,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
-const ROOT_ELEMENT_TAG = 'app-root';
+const ROOT_ELEMENT_TAG = 'app-root-custom';
 
 let rootElement = document.querySelector(ROOT_ELEMENT_TAG);
 
